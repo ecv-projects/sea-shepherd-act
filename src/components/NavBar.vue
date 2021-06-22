@@ -2,13 +2,16 @@
   <header class="navbar" :class="{ offline: !networkOnLine }">
     <router-link to="/home">
       <img alt="logo-bento" class="logo" src="@/assets/img/bento-starter.svg" />
-      <span class="site-name title-desktop">{{ appTitle }}</span>
-      <span class="site-name title-mobile">{{ appShortTitle }}</span>
+      <!-- <span class="site-name title-desktop">{{ appTitle }}</span> -->
+      <!-- <span class="site-name title-mobile">{{ appShortTitle }}</span> -->
     </router-link>
     <div class="links">
       <nav class="nav-links">
-        <div class="nav-item">
+        <!-- <div class="nav-item">
           <router-link to="/products">Products</router-link>
+        </div> -->
+        <div class="nav-item">
+          <router-link to="/species">Espèces</router-link>
         </div>
         <div v-if="!isUserLoggedIn && networkOnLine" class="nav-item">
           <router-link to="/login">Login</router-link>
@@ -25,7 +28,7 @@
 
       <img
         v-if="isUserLoggedIn && networkOnLine"
-        class="user-picture can-hide"
+        class="user-picture"
         :src="user.photoURL"
         alt="Avatar"
       />
@@ -55,17 +58,14 @@ export default {
 @import '@/theme/variables.scss';
 
 .navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 20;
-  right: 0;
-  height: $navbar-height;
-  background-color: $navbar-color;
-  box-sizing: border-box;
-  border-bottom: 1px solid #eaecef;
-  padding: 0.7rem 1.5rem;
-  line-height: 2.2rem;
+  // height: $navbar-height;
+  background-color: $black;
+  // box-sizing: border-box;
+  padding: 16px 26px;
+  // line-height: 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   a {
     display: flex;
@@ -81,8 +81,6 @@ export default {
   }
 
   @media (max-width: 500px) {
-    padding: 0.7rem 0.7rem;
-
     .can-hide {
       display: none;
     }
@@ -113,9 +111,6 @@ export default {
     box-sizing: border-box;
     white-space: nowrap;
     font-size: 0.9rem;
-    position: absolute;
-    right: 1.5rem;
-    top: 0.7rem;
     display: flex;
 
     .nav-links {

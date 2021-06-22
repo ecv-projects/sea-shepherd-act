@@ -2,10 +2,17 @@
 
 $vue-color: #46bd87;
 $danger-color: #ea4d46;
+$black: #000;
+$white: #FFF;
 
 /* Navbar */
 
 $navbar-height: 3.6rem;
 $navbar-color: #fff;
 $navbar-offline-color: #333;
-$navbar-link-color: #2c3e50;
+$navbar-link-color: #fff;
+
+/* reset css */
+h1 {
+  margin: 0;
+}

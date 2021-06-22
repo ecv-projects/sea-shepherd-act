@@ -58,6 +58,19 @@ const router = new Router({
       component: () =>
         import(/* webpackChunkName: "client-chunk-product-details" */ '@/views/Product.vue')
     },
+    {
+      path: '/species',
+      name: 'species',
+      component: () =>
+        import(/* webpackChunkName: "client-chunk-products" */ '@/views/Species.vue')
+    },
+    {
+      path: '/species/:id',
+      name: 'specie',
+      props: true,
+      component: () =>
+        import(/* webpackChunkName: "client-chunk-product-details" */ '@/views/Specie.vue')
+    },
     { path: '*', redirect: '/home' }
   ]
 })

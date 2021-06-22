@@ -1,20 +1,26 @@
 <template>
-  <div class="page-wrapper">
-    <h1 class="home-page-title">{{ appTitle }}</h1>
-    <img alt="logo-bento" class="logo" src="@/assets/img/bento-starter.svg" />
+  <div>
+    <nav-bar></nav-bar>
+    <div class="page-wrapper">
+      <h1 class="home-page-title">{{ appTitle }}</h1>
+      <!-- <img alt="logo-bento" class="logo" src="@/assets/img/bento-starter.svg" />
 
-    <a
-      rel="noopener"
-      class="documentation-link"
-      target="_blank"
-      href="https://bento-starter.netlify.com/"
-      >Documentation →</a
-    >
+      <a
+        rel="noopener"
+        class="documentation-link"
+        target="_blank"
+        href="https://bento-starter.netlify.com/"
+        >Documentation →</a
+      > -->
+      <specie-list class="specie-list"></specie-list>
+    </div>
   </div>
 </template>
 
 <script>
+import NavBar from '@/components/NavBar'
 import { mapState } from 'vuex'
+import SpecieList from '@/components/SpecieList'
 
 export default {
   head() {
@@ -31,7 +37,11 @@ export default {
       ]
     }
   },
-  computed: mapState('app', ['appTitle'])
+  computed: mapState('app', ['appTitle']),
+  components: {
+    SpecieList,
+    NavBar
+  }
 }
 </script>
 
