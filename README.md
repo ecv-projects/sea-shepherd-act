@@ -1,4 +1,4 @@
-# My bento-starter project
+# Sea Shepherd Act Project
 
 ## Documentation
 
