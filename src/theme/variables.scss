@@ -10,6 +10,10 @@ $black: #000;
 $white: #FFF;
 $poppins: 'Poppins', sans-serif;
 $barlow: 'Barlow', sans-serif;
+$primary-green: #83F1CE;
+$status-1: #FEA656;
+$status-2: #FEA656;
+$status-3: #FE5656;
 
 /* generals */
 h1, h2, h3, h4, h5, h6 {
@@ -19,11 +23,17 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2 {
   font-size: 30px;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 }
 
 h3 {
   font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+h4 {
+  font-size: 16px;
   font-weight: 700;
   line-height: 22px;
 }
@@ -34,10 +44,25 @@ p {
   margin-bottom: 12px;
 }
 
-.vulnerable {
-  background-color: $vulnerable-color;
+.back {
+  img {
+    max-height: 18px;
+  }
 }
 
-.danger {
-  background-color: $danger-color;
+.specie-status {
+  color: $black;
+  font-size: 14px;
+  padding: 3px 12px;
+  border-radius: 40px;
+  display: inline-block;
+  margin-bottom: 20px;
+
+  &.status-1{}
+  &.status-2{
+    background-color: $status-2;
+  }
+  &.status-3{
+    background-color: $status-3;
+  }
 }

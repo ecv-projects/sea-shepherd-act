@@ -2,6 +2,10 @@
   <div id="app">
     <div class="main-wrapper">
       <router-view />
+      <div class="report">
+        <img alt="logo-report" class="icon" src="@/assets/img/report.svg" />
+        <p>Signaler</p>
+      </div>
     </div>
 
     <new-content-available-toastr
@@ -80,6 +84,32 @@ body {
         margin: auto;
         padding: 26px;
         min-height: 100vh;
+      }
+
+      .report {
+        cursor: pointer;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        background-color: $primary-green;
+        position: fixed;
+        bottom: 45px;
+        right: 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+          max-height: 35px;
+        }
+
+        p {
+          margin-bottom: 0;
+          color: $black;
+          font-size: 11px;
+          font-weight: 700;
+        }
       }
     }
   }

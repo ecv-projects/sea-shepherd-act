@@ -1,18 +1,13 @@
 <template>
   <header class="navbar" :class="{ offline: !networkOnLine }">
     <router-link to="/home">
-      <img alt="logo-bento" class="logo" src="@/assets/img/bento-starter.svg" />
-      <!-- <span class="site-name title-desktop">{{ appTitle }}</span> -->
-      <!-- <span class="site-name title-mobile">{{ appShortTitle }}</span> -->
+      <img alt="logo-bento" class="logo" src="@/assets/img/logo-home.svg" />
     </router-link>
     <div class="links">
       <nav class="nav-links">
         <!-- <div class="nav-item">
-          <router-link to="/products">Products</router-link>
-        </div> -->
-        <div class="nav-item">
           <router-link to="/species">Espèces</router-link>
-        </div>
+        </div> -->
         <div v-if="!isUserLoggedIn && networkOnLine" class="nav-item">
           <router-link to="/login">Login</router-link>
         </div>
@@ -61,8 +56,9 @@ export default {
   background-color: $black;
   padding: 16px 26px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  position: relative;
 
   a {
     display: flex;
@@ -91,16 +87,7 @@ export default {
     }
   }
 
-  .site-name {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #2c3e50;
-    position: relative;
-  }
-
   .logo {
-    height: 24px;
-    padding-right: 8px;
   }
 
   .links {
@@ -109,6 +96,11 @@ export default {
     white-space: nowrap;
     font-size: 0.9rem;
     display: flex;
+    position: absolute;
+    right: 26px;
+    top: 50%;
+    transform: translateY(-50%);
+
 
     .nav-links {
       display: flex;
@@ -155,7 +147,6 @@ export default {
   }
 
   &.offline {
-    // background: $navbar-offline-color;
     .links .nav-links .nav-item a,
     .site-name {
       color: white;

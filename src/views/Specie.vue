@@ -17,6 +17,7 @@ export default {
       LatinName: 'Alopias Superciliosus',
       CommonName : 'Requin Renard',
       Status: 'Vulnérable',
+      StatusClass: '2',
       Desc: 'Sous le nom vernaculaire de requin-renard, se cache plusieurs espèces. Toutes appartiennent à la famille des Alopias. Parmi ses membres, deux intéressent le plongeur : le requin-renard commun ou renard de mer',
       FishingArea: [
         { id: uniqueId('area-'), name: 'Atlantique Nord', ratio: '70%', status: 'interdite', class: '3', img: 'preview_map.png' },
@@ -28,7 +29,10 @@ export default {
       ],
       Alternatives: [
         { id: uniqueId('alternative-'), name: 'Fauxmon', desc: 'Alternative vegetalienne', img: 'alternative.png' },
-        { id: uniqueId('alternative-'), name: 'Fauxmon', desc: 'Alternative vegetalienne', img: 'alternative.png' }
+        { id: uniqueId('alternative-'), name: 'Fauxmon', desc: 'Alternative vegetalienne', img: 'alternative.png' },
+        { id: uniqueId('alternative-'), name: 'Fauxmon', desc: 'Alternative vegetalienne', img: 'alternative.png' },
+        { id: uniqueId('alternative-'), name: 'Fauxmon', desc: 'Alternative vegetalienne', img: 'alternative.png' },
+        { id: uniqueId('alternative-'), name: 'Fauxmon', desc: 'Alternative vegetalienne', img: 'alternative.png' },
       ]
     }
    };
