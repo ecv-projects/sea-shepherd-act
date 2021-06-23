@@ -1,18 +1,43 @@
-/* Misc */
+@import '_reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;600;700;800;900&display=swap');
 
+/* Misc */
 $vue-color: #46bd87;
-$danger-color: #ea4d46;
+$vulnerable-color: #FEA656;
+$danger-color: #FE5656;
 $black: #000;
 $white: #FFF;
+$poppins: 'Poppins', sans-serif;
+$barlow: 'Barlow', sans-serif;
 
-/* Navbar */
+/* generals */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $poppins;
+}
 
-$navbar-height: 3.6rem;
-$navbar-color: #fff;
-$navbar-offline-color: #333;
-$navbar-link-color: #fff;
+h1, h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
 
-/* reset css */
-h1 {
-  margin: 0;
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+p {
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 12px;
+}
+
+.vulnerable {
+  background-color: $vulnerable-color;
+}
+
+.danger {
+  background-color: $danger-color;
 }

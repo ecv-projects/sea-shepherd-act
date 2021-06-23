@@ -58,11 +58,8 @@ export default {
 @import '@/theme/variables.scss';
 
 .navbar {
-  // height: $navbar-height;
   background-color: $black;
-  // box-sizing: border-box;
   padding: 16px 26px;
-  // line-height: 2.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -132,7 +129,7 @@ export default {
           font-weight: 500;
           font-size: 0.9rem;
           text-decoration: none;
-          color: $navbar-link-color;
+          // color: $navbar-link-color;
           border-color: #2c3e50;
           line-height: 1.4rem;
           display: inline-block;
@@ -158,7 +155,7 @@ export default {
   }
 
   &.offline {
-    background: $navbar-offline-color;
+    // background: $navbar-offline-color;
     .links .nav-links .nav-item a,
     .site-name {
       color: white;
