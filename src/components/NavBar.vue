@@ -1,7 +1,7 @@
 <template>
   <header class="navbar" :class="{ offline: !networkOnLine }">
     <router-link to="/home">
-      <img alt="logo-bento" class="logo" src="@/assets/img/logo-home.svg" />
+      <img alt="logo-act" class="logo" src="@/assets/img/logo-home.svg" />
     </router-link>
     <div class="links">
       <nav class="nav-links">
@@ -88,6 +88,7 @@ export default {
   }
 
   .logo {
+    max-width: 90px;
   }
 
   .links {
