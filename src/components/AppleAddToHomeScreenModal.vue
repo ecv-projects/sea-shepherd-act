@@ -1,22 +1,23 @@
 <template>
   <div>
     <div class="modal-wrapper">
-      <div class="close" @click="$emit('close')"></div>
+      <div class="close" @click="$emit('close')">
+        <img alt="logo-close" class="icon" src="@/assets/img/close.svg" />
+      </div>
       <div class="main-content">
         <img class="app-logo" src="@/assets/logo.png" />
-        <h3 class="title">Install {{ appTitle }}</h3>
+        <h3 class="title">Installer {{ appTitle }}</h3>
         <p class="description">
-          Install this application to your home screen for quickly and easy
-          access when you're on the go.
+          Installez cette application sur votre écran d'accueil pour rapidement et facilement
+          accéder à l'application.
         </p>
-      </div>
-
-      <div class="footer">
-        Just tap
-        <img
-          class="apple-navigation-action-img"
-          src="@/assets/img/apple-navigation-action.png"
-        />then 'Add to Home Screen'
+        <p>
+          Appuyez simplement sur
+          <img
+            class="apple-navigation-action-img"
+            src="@/assets/img/apple-navigation-action.png"
+          />puis "Sur l'écran d'accueil"
+        </p>
       </div>
     </div>
   </div>
@@ -34,38 +35,30 @@ export default {
 .modal-wrapper {
   box-shadow: 0px 0px 20px 0px #656565;
   margin: 30px;
-  background: white;
+  background: #2D2D33;
   position: relative;
+  border-radius: 20px;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .close {
     position: absolute;
     right: 10px;
     top: 10px;
-    width: 21px;
-    height: 21px;
-    opacity: 0.3;
-  }
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #09F9BF;
+    border-radius: 50%;
 
-  .close:hover {
-    opacity: 1;
-  }
-
-  .close:before,
-  .close:after {
-    position: absolute;
-    left: 8px;
-    content: ' ';
-    height: 22px;
-    width: 2px;
-    background-color: #333;
-  }
-
-  .close:before {
-    transform: rotate(45deg);
-  }
-
-  .close:after {
-    transform: rotate(-45deg);
+    img {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   .main-content {
@@ -89,15 +82,6 @@ export default {
       margin: 5px 0;
       text-align: center;
     }
-  }
-
-  .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-color: #f9f9f9;
-    font-size: 12px;
 
     .apple-navigation-action-img {
       max-width: 15px;
