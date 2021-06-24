@@ -8,11 +8,11 @@
         <img class="app-logo" src="@/assets/logo.png" />
         <h3 class="title">Installer {{ appTitle }}</h3>
         <p class="description">
-          Installez cette application sur votre écran d'accueil pour rapidement et facilement
-          accéder à l'application.
+          Installez cette application sur <br>votre écran d'accueil
+          pour y accéder rapidement et facilement !
         </p>
         <p class="description">
-          Appuyez simplement sur
+          Appuyez simplement <br> sur
           <img
             class="apple-navigation-action-img"
             src="@/assets/img/apple-navigation-action.png"
@@ -33,8 +33,8 @@ export default {
 
 <style lang="scss" scoped>
 .modal-wrapper {
-  border: 1px solid #09F9BF;
-  margin: 30px;
+  // border: 1px solid #09F9BF;
+  margin: 20px;
   background: #2D2D33;
   position: relative;
   border-radius: 20px;
@@ -45,8 +45,8 @@ export default {
 
   .close {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 20px;
+    top: 20px;
     width: 42px;
     height: 42px;
     display: flex;

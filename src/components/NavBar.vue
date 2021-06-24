@@ -113,6 +113,11 @@ export default {
         display: inline-block;
         margin-left: 1.5rem;
         line-height: 2.2rem;
+        color: $white;
+
+        &.logout-item {
+          color: $black;
+        }
 
         &:first-child {
           margin-left: 0;
