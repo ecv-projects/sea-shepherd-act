@@ -11,7 +11,7 @@
           Installez cette application sur votre écran d'accueil pour rapidement et facilement
           accéder à l'application.
         </p>
-        <p>
+        <p class="description">
           Appuyez simplement sur
           <img
             class="apple-navigation-action-img"
@@ -33,7 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .modal-wrapper {
-  box-shadow: 0px 0px 20px 0px #656565;
+  border: 1px solid #09F9BF;
   margin: 30px;
   background: #2D2D33;
   position: relative;
@@ -69,17 +69,17 @@ export default {
     align-items: center;
 
     .app-logo {
-      max-width: 50px;
-      margin-bottom: 10px;
+      max-width: 70px;
+      margin-bottom: 20px;
     }
 
     .title {
-      margin: 5px 0;
+      margin: 8px 0;
       text-align: center;
     }
 
     .description {
-      margin: 5px 0;
+      margin: 8px 0;
       text-align: center;
     }
 
