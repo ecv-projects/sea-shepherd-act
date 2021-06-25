@@ -88,7 +88,8 @@ export default {
   }
 
   .logo {
-    max-width: 90px;
+    width: 70px;
+    height: 70px;
   }
 
   .links {
